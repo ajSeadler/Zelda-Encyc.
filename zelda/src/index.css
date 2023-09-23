@@ -1,0 +1,136 @@
+/* src/index.css */
+
+/* Apply global styles */
+
+/* Set a background color for the entire page */
+body {
+  background-color: #1f3b1c; /* Dark green background color similar to Ocarina of Time */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style headings */
+h1 {
+  color: #ffcc29; /* Yellow color similar to Ocarina of Time logo */
+  text-align: center;
+  margin-top: 80px;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+}
+
+/* Style links */
+a {
+  color: #ffcc29; /* Yellow color similar to Ocarina of Time logo */
+  text-decoration: none;
+  font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove bullet points from lists */
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* Center content vertically and horizontally */
+.games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+/* src/components/GameDetail.css */
+
+/* Style the game details container */
+.game-detail {
+  background-color: #141b0d; /* Dark green background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  max-width: 600px; /* Limit the width of the details */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 20px; /* Add some spacing from the top */
+}
+
+/* Style headings */
+.game-detail h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style paragraphs */
+.game-detail p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style the back button */
+.back-button {
+  display: block;
+  margin-top: 20px; /* Add spacing below the details */
+  text-align: center;
+}
+
+.back-button a {
+  color: #ffcc29; /* Yellow color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
+
+/* src/components/GameDetailPage.css */
+
+/* Style the game detail page container */
+.game-detail-page {
+  background-color: #141b0d; /* Dark green background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  max-width: 600px; /* Limit the width of the details */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 20px; /* Add some spacing from the top */
+}
+
+/* Style headings */
+.game-detail-page h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style paragraphs */
+.game-detail-page p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style the back button */
+.back-button {
+  display: block;
+  margin-top: 20px; /* Add spacing below the details */
+  text-align: center;
+}
+
+.back-button a {
+  color: #ffcc29; /* Yellow color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
