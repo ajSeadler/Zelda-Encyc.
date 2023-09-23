@@ -39,7 +39,7 @@ function GameDetailPage() {
       <p>Publisher: {game.publisher}</p>
       <p>Released Date: {game.released_date}</p>
       <div className="back-button"> {/* Add the back-button class */}
-        <Link to="/games">Back to Games</Link>
+        <Link to="/">Back to Games</Link>
       </div>
     </div>
   );
