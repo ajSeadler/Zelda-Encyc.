@@ -6,6 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 function GameDetailPage() {
   const { id } = useParams();
   const [game, setGame] = useState(null);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     fetch(`https://zelda.fanapis.com/api/games/${id}`)
@@ -25,6 +26,24 @@ function GameDetailPage() {
       .catch((error) => {
         console.error('Error fetching game details:', error);
       });
+
+    // Fetch all characters
+    fetch('https://zelda.fanapis.com/api/characters')
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // Filter characters based on appearances in the current game
+          const charactersInGame = data.data.filter((character) =>
+            character.appearances.includes(`https://zelda.fanapis.com/api/games/${id}`)
+          );
+          setCharacters(charactersInGame);
+        } else {
+          console.error('API did not return a successful response for characters:', data);
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching characters:', error);
+      });
   }, [id]);
 
   if (!game) {
@@ -32,14 +51,24 @@ function GameDetailPage() {
   }
 
   return (
-    <div className="game-detail-page"> {/* Add the game-detail-page class */}
+    <div className="game-detail-page">
       <h2>{game.name}</h2>
       <p>{game.description}</p>
       <p>Developer: {game.developer}</p>
       <p>Publisher: {game.publisher}</p>
       <p>Released Date: {game.released_date}</p>
-      <div className="back-button"> {/* Add the back-button class */}
+      <div className="back-button">
         <Link to="/">Back to Games</Link>
+      </div>
+
+      {/* Display characters for the current game */}
+      <div className="characters-list">
+        <h3>Characters:</h3>
+        <ul>
+          {characters.map((character) => (
+            <li key={character.id}>{character.name}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
