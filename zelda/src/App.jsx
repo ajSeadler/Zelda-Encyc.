@@ -9,7 +9,8 @@ function App() {
   return (
     
       <Routes>
-        <Route path="/games" element={<GameList />} />
+        
+        <Route path="/" element={<GameList />} />
         <Route path="/games/:id" element={<GameDetailPage />} />
       </Routes>
     
