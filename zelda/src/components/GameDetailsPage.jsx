@@ -58,7 +58,7 @@ function GameDetailPage() {
       <p>Publisher: {game.publisher}</p>
       <p>Released Date: {game.released_date}</p>
       <div className="back-button">
-        <Link to="/">Back to Games</Link>
+        <Link to="/games">Back to Games</Link>
       </div>
 
       {/* Display characters for the current game */}

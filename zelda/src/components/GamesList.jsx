@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function GameList() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    fetch('https://zelda.fanapis.com/api/games')
+    fetch("https://zelda.fanapis.com/api/games")
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         return response.json();
       })
@@ -19,11 +19,11 @@ function GameList() {
           );
           setGames(sortedGames);
         } else {
-          console.error('API did not return an array of games:', data);
+          console.error("API did not return an array of games:", data);
         }
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       });
   }, []);
 
@@ -37,8 +37,11 @@ function GameList() {
               <h2>{game.name}</h2>
             </Link>
           </li>
+
         ))}
       </ul>
+      <Link to="/">Back to Home</Link>
+
     </div>
   );
 }

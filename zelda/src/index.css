@@ -49,6 +49,92 @@ ul {
   min-height: 50vh;
 }
 
+/* src/components/GamesList.css */
+.show-games-button {
+  font-size: 12px;
+  position: fixed;
+  padding: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 85px solid yellow;
+  border-top: 0;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1; /* Ensure the triangle appears on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-games-button span {
+  position: relative;
+  top: 55px;
+  z-index: 2; /* Ensure the text appears above the triangle */
+  color: rgb(155, 139, 19);/* Set the text color */
+}
+
+.show-games-button-1 {
+  position: fixed;
+  font-size: 12px;
+  padding: 0px;
+  top: 59%;
+  left: 38.5%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 85px solid yellow;
+  border-top: 0;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1; /* Ensure the triangle appears on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-games-button-1 span {
+  position: relative;
+  top: 55px;
+  z-index: 2; /* Ensure the text appears above the triangle */
+  color: rgb(155, 139, 19); /* Set the text color */
+}
+
+.show-games-button-2 {
+  position: fixed;
+  padding: 0px;
+  font-size: 12px;
+  top: 59%;
+  left: 61.5%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 85px solid yellow;
+  border-top: 0;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1; /* Ensure the triangle appears on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-games-button-2 span {
+  position: relative;
+  top: 55px;
+  z-index: 2; /* Ensure the text appears above the triangle */
+  color: rgb(155, 139, 19); } /* Set the text color */
+ 
+
+
 /* src/components/GameDetail.css */
 
 /* Style the game details container */
