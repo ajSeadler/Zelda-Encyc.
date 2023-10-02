@@ -12,9 +12,14 @@ body {
 
 /* Style headings */
 h1 {
+  font-family: 'ZeldaFont', sans-serif; /* Apply the custom font */
+  font-size: auto; /* Adjust font size as needed */
   color: #ffcc29; /* Yellow color similar to Ocarina of Time logo */
   text-align: center;
   margin-top: 80px;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 4px; /* Adjust letter spacing for a fantasy look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
 }
 
 h2 {
@@ -46,93 +51,148 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 25vh;
 }
 
-/* src/components/GamesList.css */
-.show-games-button {
-  font-size: 12px;
-  position: fixed;
-  padding: 0px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 85px solid yellow;
-  border-top: 0;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1; /* Ensure the triangle appears on top */
+.center-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 55vh;
 }
 
-.show-games-button span {
-  position: relative;
-  top: 55px;
-  z-index: 2; /* Ensure the text appears above the triangle */
-  color: rgb(155, 139, 19);/* Set the text color */
+#triforce {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+
+#triangle{
+	content:'';
+	position:relative;
+	width:0px;
+	height:0px;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-bottom: 104px solid #FFBC00;
+}
+#triangle:before{
+	content:'';
+	position:absolute;
+	display:block;
+	border-left:60px solid transparent;
+	border-right:60px solid transparent;
+	border-bottom:104px solid #FFBC00;
+	top:104px;
+	left:-120px;
+}
+#triangle:after{
+	content:'';
+	position:absolute;
+	display:block;
+	border-left:60px solid transparent;
+	border-right:60px solid transparent;
+	border-bottom:104px solid #FFBC00;
+	top:104px;
+}
+#shadow{
+	content:'';
+	width:0px;
+	height:0px;
+	position:relative;
+	z-index:-1;
+	border-left:60px solid transparent;
+	border-right:60px solid transparent;
+	border-top:104px solid #FF8C00;
+	transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	-ms-transform:rotate(60deg);
+	-o-transform:rotate(60deg);
+	top:27px;
+	left:-73px;
+}
+#shadow:before{
+	content:'';
+	border-left:60px solid transparent;
+	border-right:60px solid transparent;
+	border-top:104px solid #FF8C00;
+	position:absolute;
+	display:block;
+	top:0px;
+	left:0px;
+}
+#shadow:after{
+	content:'';
+	border-left:60px solid transparent;
+	border-right:60px solid transparent;
+	border-top:104px solid #FF8C00;
+	position:absolute;
+	display:block;
+	top:-104px;
+	left:60px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row; /* Arrange buttons vertically */
+  align-items: center; /* Center horizontally */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Add button styling as needed */
+/* Style the buttons */
+.show-games-button, .show-games-button-1, .show-games-button-2 {
+  background-color: transparent; /* Transparent background */
+  color: #FFBC00; /* Yellow text color */
+  margin: 5px;
+  border: 2px solid #FFBC00; /* Yellow border */
+  padding: 10px 20px; /* Add padding for better spacing */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Style the buttons on hover */
+.show-games-button:hover, .show-games-button-1:hover, .show-games-button-2:hover {
+  background-color: #FFBC00; /* Yellow background on hover */
+  color: #000; /* Black text color on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Optional: Add some border-radius for rounded corners */
+.show-games-button, .show-games-button-1, .show-games-button-2 {
+  border-radius: 5px;
+}
+
+/* Optional: Add a box shadow for depth */
+.show-games-button, .show-games-button-1, .show-games-button-2 {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Add button styling as needed */
+/* .show-games-button {
+  background-color: #FFBC00;
+  color: #000;
 }
 
 .show-games-button-1 {
-  position: fixed;
-  font-size: 12px;
-  padding: 0px;
-  top: 59%;
-  left: 38.5%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 85px solid yellow;
-  border-top: 0;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1; /* Ensure the triangle appears on top */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.show-games-button-1 span {
-  position: relative;
-  top: 55px;
-  z-index: 2; /* Ensure the text appears above the triangle */
-  color: rgb(155, 139, 19); /* Set the text color */
+  background-color: #FFBC00;
+  color: #000;
 }
 
 .show-games-button-2 {
-  position: fixed;
-  padding: 0px;
-  font-size: 12px;
-  top: 59%;
-  left: 61.5%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 85px solid yellow;
-  border-top: 0;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1; /* Ensure the triangle appears on top */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  background-color: #FFBC00;
+  color: #000;
+} */
 
-.show-games-button-2 span {
-  position: relative;
-  top: 55px;
-  z-index: 2; /* Ensure the text appears above the triangle */
-  color: rgb(155, 139, 19); } /* Set the text color */
- 
+
 
 
 /* src/components/GameDetail.css */
