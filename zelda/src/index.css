@@ -1,18 +1,24 @@
 /* src/index.css */
 
 /* Apply global styles */
+@font-face {
+  font-family: 'Hylia Serif';
+  src: url('./components/HyliaSerifBeta-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Set a background color for the entire page */
 body {
   background-color: #1f3b1c; /* Dark green background color similar to Ocarina of Time */
-  font-family: 'Arial', sans-serif;
+  font-family: 'Hylia Serif';
   margin: 0;
   padding: 0;
 }
 
 /* Style headings */
 h1 {
-  font-family: 'ZeldaFont', sans-serif; /* Apply the custom font */
+  font-family: 'Hylia Serif'; /* Apply the Hylia Serif font */
   font-size: auto; /* Adjust font size as needed */
   color: #ffcc29; /* Yellow color similar to Ocarina of Time logo */
   text-align: center;
@@ -59,7 +65,7 @@ ul {
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  height: 55vh;
+  height: 45vh;
 }
 
 #triforce {
@@ -151,6 +157,7 @@ ul {
 .show-games-button, .show-games-button-1, .show-games-button-2 {
   background-color: transparent; /* Transparent background */
   color: #FFBC00; /* Yellow text color */
+  font-family: 'hylia serif';
   margin: 5px;
   border: 2px solid #FFBC00; /* Yellow border */
   padding: 10px 20px; /* Add padding for better spacing */
@@ -279,4 +286,16 @@ ul {
 
 .back-button a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 306px) {
+  .center-container {
+    height: 40vh;
+  }
+
+  .button-container {
+    margin-top: 75px;
+  }
+
+  
 }
