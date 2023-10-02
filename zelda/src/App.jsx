@@ -2,6 +2,10 @@ import React from "react";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import GameList from "./components/GamesList";
 import GameDetailPage from "./components/GameDetailsPage";
+import CharacterList from "./components/CharacterList"; // Import the CharacterList component
+import DungeonList from './components/DungeonList'; // Import DungeonList component
+
+
 import "./index.css";
 import "./app.css";
 
@@ -12,6 +16,14 @@ function HomePage() {
     // Redirect to the games page when the button is clicked
     navigate("/games");
   };
+
+  const handleShowCharacters = () => {
+    navigate("/characters")
+  }
+
+  const handleShowDungeons = () => {
+    navigate("/dungeons")
+  }
 
   return (
     <>
@@ -27,10 +39,10 @@ function HomePage() {
     <button className="show-games-button" onClick={handleShowGames}>
       <span>Games</span>
     </button>
-    <button className="show-games-button-1" onClick={handleShowGames}>
+    <button className="show-games-button-1" onClick={handleShowCharacters}>
       <span>Characters</span>
     </button>
-    <button className="show-games-button-2" onClick={handleShowGames}>
+    <button className="show-games-button-2" onClick={handleShowDungeons}>
       <span>Dungeons</span>
     </button>
   </div>
@@ -45,6 +57,9 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/games" element={<GameList />} />
       <Route path="/games/:id" element={<GameDetailPage />} />
+      <Route path="/characters" element={<CharacterList />} />
+      <Route path="/dungeons" element={<DungeonList />} /> 
+
     </Routes>
   );
 }

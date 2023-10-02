@@ -28,7 +28,7 @@ function GameDetailPage() {
       });
 
     // Fetch all characters
-    fetch('https://zelda.fanapis.com/api/characters')
+    fetch('https://zelda.fanapis.com/api/characters?limit=100')
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {

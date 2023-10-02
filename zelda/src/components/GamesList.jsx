@@ -29,7 +29,9 @@ function GameList() {
 
   return (
     <div className="container">
-      <h1>The Legend of Zelda</h1>
+      <h1>Games</h1>
+      <Link to="/" style={{ margin: '3px' }}>Back to Home</Link>
+
       <ul className="game-list">
         {games.map((game) => (
           <li key={game.id} className="game-item">

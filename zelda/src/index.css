@@ -60,6 +60,81 @@ ul {
   min-height: 25vh;
 }
 
+/* src/components/CharacterList.css */
+
+/* Style the character list container */
+/* src/components/CharacterList.css */
+
+/* Style the search input */
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ffcc29; /* Yellow border for the input */
+  border-radius: 5px;
+  background-color: #1f3b1c; /* Dark green background color */
+  color: #fff; /* Text color */
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style the filtered character list */
+.character-list ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.character-list li {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #141b0d; /* Dark green background color for character items */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+.character-list h3 {
+  font-size: 20px;
+  color: #ffcc29; /* Yellow color for character names */
+  margin-bottom: 5px;
+}
+
+.character-list p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff; /* Text color for character descriptions */
+}
+
+/* Style the Back to Home link */
+.character-list a {
+  display: block;
+  margin-top: 20px; /* Add spacing below the list */
+  text-align: center;
+  color: #ffcc29; /* Yellow color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.character-list a:hover {
+  text-decoration: underline;
+}
+
+.character-list .back-button a {
+  color: #ffcc29; /* Yellow color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.character-list .back-button a:hover {
+  text-decoration: underline;
+}
+
+
 .center-container {
   display: flex;
   flex-direction: column; /* Stack children vertically */
